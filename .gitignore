@@ -1,0 +1,19 @@
+# Dependencies directory
+node_modules/
+
+# Yarn
+yarn.lock
+.yarn-integrity
+
+# Logs
+logs
+*.log
+yarn-debug.log*
+yarn-error.log*
+npm-debug.log*
+
+# environment variables
+.env
+
+# build directory
+build/
