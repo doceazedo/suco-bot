@@ -1,4 +1,6 @@
 import { ping } from './ping';
+import { song } from './song';
+
 import type { ChatUserstate } from 'tmi.js';
 
 export type Command = {
@@ -6,4 +8,4 @@ export type Command = {
   exec: (input: string, args: string[], user: ChatUserstate) => void;
 };
 
-export const commands: Command[] = [ping];
+export const commands: Command[] = [ping, song];
