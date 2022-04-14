@@ -1,5 +1,5 @@
 import { broadcast, send } from '../utils';
-import { getCurrentlyPlayingDetails } from '../services/overlay';
+import { getCurrentlyPlayingDetails } from '../clients/overlay';
 import type { Command } from '.';
 import 'dotenv/config';
 
