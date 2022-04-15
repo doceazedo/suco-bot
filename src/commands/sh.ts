@@ -1,4 +1,4 @@
-import { broadcast, send, replyError, isModerator } from '../utils';
+import { broadcast, replyError, isModerator } from '../utils';
 import { getUser } from '../clients/overlay';
 import type { Command } from '.';
 

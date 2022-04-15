@@ -13,7 +13,6 @@ export const evaluate: Command = {
 
     try {
       const output = vm.run(cmd);
-      console.log(output);
       reply(user, output as string);
     } catch (error) {
       replyError(user, error as string);

@@ -1,4 +1,4 @@
-import client from '../client';
+import { tmiClient } from '../clients/tmi';
 import 'dotenv/config';
 import type { Userstate } from 'tmi.js';
 
@@ -22,8 +22,8 @@ type Color =
 const channel = process.env.TWITCH_CHANNEL || '';
 
 export const send = (str: string, color: Color = 'SpringGreen') => {
-  client.say(channel, `/color ${color}`);
-  client.say(channel, str);
+  tmiClient.say(channel, `/color ${color}`);
+  tmiClient.say(channel, str);
 };
 
 export const reply = (
@@ -39,7 +39,7 @@ export const sendError = (str: string) => {
 };
 
 export const replyError = (user: Userstate, str: string) => {
-  reply(user, str, 'Red');
+  send(`/me @${user.username}, ${str}`, 'Red');
 };
 
 export const sendStriped = (msgs: string[], color1: Color, color2: Color) => {
