@@ -41,3 +41,10 @@ export const sendError = (str: string) => {
 export const replyError = (user: Userstate, str: string) => {
   reply(user, str, 'Red');
 };
+
+export const sendStriped = (msgs: string[], color1: Color, color2: Color) => {
+  msgs.forEach((msg, i) => {
+    const color = (i + 1) % 2 == 0 ? color1 : color2;
+    send(`/me ${msg}`, color);
+  });
+};

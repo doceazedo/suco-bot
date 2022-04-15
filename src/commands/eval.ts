@@ -1,5 +1,5 @@
 import { VM } from 'vm2';
-import { reply } from '../utils';
+import { reply, replyError } from '../utils';
 import type { Command } from '.';
 
 export const evaluate: Command = {
@@ -10,14 +10,13 @@ export const evaluate: Command = {
       allowAsync: false,
     });
     const cmd = args.join(' ');
-    let output;
 
     try {
-      output = vm.run(cmd);
+      const output = vm.run(cmd);
+      console.log(output);
+      reply(user, output as string);
     } catch (error) {
-      output = error;
+      replyError(user, error as string);
     }
-
-    reply(user, output);
   },
 };
