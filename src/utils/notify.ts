@@ -18,7 +18,7 @@ export const notify = async (
     {
       title,
       message,
-      sound: false,
+      sound: true,
       icon,
     },
     () => {
