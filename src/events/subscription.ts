@@ -44,7 +44,7 @@ export const subscription = {
   exec: (message: EventMessageSubscription) => {
     const months = message.count == 1 ? 'mês' : 'meses';
 
-    const isPrime = message.subPlan.toLowerCase() == 'prime';
+    const isPrime = message.sub_plan?.toLowerCase() == 'prime';
     const isResub = (message.months || 0) > 1;
     const isStrike = (message.streak_months || 0) > 0;
 
