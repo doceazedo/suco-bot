@@ -1,4 +1,4 @@
-import { notify } from '../utils';
+import { notify, send } from '../utils';
 
 type EventMessageFollow = {
   priority: number;
@@ -26,5 +26,6 @@ export const follow = {
   type: 'follow',
   exec: (message: EventMessageFollow) => {
     notify(`Novo seguidor! 💜`, `${message.name} te seguiu.`, message.name);
+    send(`@${message.name} acabou de seguir! 💜`);
   },
 };

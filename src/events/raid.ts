@@ -1,4 +1,4 @@
-import { notify } from '../utils';
+import { notify, send } from '../utils';
 
 type EventMessageRaid = {
   priority: number;
@@ -27,6 +27,9 @@ export const raid = {
       `${message.name} está fazendo uma raid! 🎊`,
       `${message.raiders} pessoas vieram no grupo!`,
       message.name
+    );
+    send(
+      `${message.name} está fazendo uma raid com ${message.raiders} pessoas! 🎊`
     );
   },
 };

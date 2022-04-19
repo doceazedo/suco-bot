@@ -1,4 +1,4 @@
-import { notify } from '../utils';
+import { notify, send } from '../utils';
 
 type EventMessageDonation = {
   priority: number;
@@ -50,12 +50,10 @@ export const donation = {
   type: 'donation',
   exec: (message: EventMessageDonation) => {
     const fallbackMsg = 'PicPay: @doceazedo';
+    const title = `${message.name} transferiu ${message.formattedAmount}! 💰`;
     const body = message.message ? `"${message.message}"` : fallbackMsg;
 
-    notify(
-      `${message.name} transferiu ${message.formattedAmount}! 💰`,
-      body,
-      message.name
-    );
+    notify(title, body, message.name);
+    send(`@${title}`);
   },
 };

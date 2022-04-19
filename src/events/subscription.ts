@@ -1,4 +1,4 @@
-import { notify } from '../utils';
+import { notify, send } from '../utils';
 
 type EventMessageSubscription = {
   priority: number;
@@ -63,5 +63,6 @@ export const subscription = {
     const body = isResub ? resubMessage : subMessage;
 
     notify(title, body, message.name);
+    send(`@${body} 🌟`);
   },
 };

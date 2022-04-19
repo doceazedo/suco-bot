@@ -1,4 +1,4 @@
-import { notify } from '../utils';
+import { notify, send } from '../utils';
 
 type EventMessageBits = {
   priority: number;
@@ -29,11 +29,9 @@ type EventMessageBits = {
 
 export const bits = {
   type: 'bits',
-  exec: (message: any) => {
-    notify(
-      `${message.name} mandou ${message.amount} bits! 💎`,
-      message.message,
-      message.name
-    );
+  exec: (message: EventMessageBits) => {
+    const title = `${message.name} mandou ${message.amount} bits! 💎`;
+    notify(title, message.message, message.name);
+    send(`@${title}`);
   },
 };
