@@ -10,6 +10,7 @@ import { social } from './social';
 import { song } from './song';
 import { specs } from './specs';
 import { team } from './team';
+import { tts } from './tts';
 
 export type Command = {
   aliases?: string[];
@@ -28,4 +29,5 @@ export const commands: Command[] = [
   song,
   specs,
   team,
+  tts,
 ];

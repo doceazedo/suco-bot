@@ -4,3 +4,4 @@ export * from './is-moderator';
 export * from './loggr';
 export * from './message';
 export * from './notify';
+export * from './play-audio';

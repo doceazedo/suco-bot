@@ -17,3 +17,5 @@ npm-debug.log*
 
 # build directory
 build/
+
+google-application-credentials.json

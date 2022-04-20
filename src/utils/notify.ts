@@ -1,3 +1,4 @@
+import os from 'os';
 import path from 'path';
 import fs from 'fs';
 import notifier from 'node-notifier';
@@ -11,7 +12,7 @@ export const notify = async (
   userId: string
 ) => {
   const user = await getUser(userId);
-  const icon = path.join(__dirname, `../../assets/tmp/${user.id}.jpg`);
+  const icon = path.join(os.tmpdir(), `${user.id}.jpg`);
   await downloadImage(user.avatar, icon);
 
   notifier.notify(
