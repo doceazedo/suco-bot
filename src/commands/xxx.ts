@@ -6,7 +6,7 @@ export const xxx: Command = {
   exec: async (input, args, user) => {
     broadcast('cmd:xxx');
     send(
-      `@${user.username} ama ${args.join(" ")}... excessivamete... aqui não @${user.username}... tem crianças aqui.`
+      `@${user.username} ama ${args.join(" ")}... excessivamente... aqui não @${user.username}... tem crianças aqui.`
     );
   },
 };
