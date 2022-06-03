@@ -15,7 +15,7 @@ export const rasteira: Command = {
   aliases: ['rasteira', 'banda', 'chute', 'puxaodetapete', 'mostrasuaverdadeirapersonalidadevagabunda'],
   exec: async (input, args, user) => {
     send(
-      `@${user.username} enfia uma rasteira na cara du ${args.join(" ")} que ${get_offense()}`
+      `@${user.username} enfia uma rasteira na cara du ${args.join(" ")} que ${get_offense()} PunOko`
     );
   },
 };
