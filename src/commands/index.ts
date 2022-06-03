@@ -9,6 +9,7 @@ import { overlay } from './overlay';
 import { ping } from './ping';
 import { pronouns } from './pronouns';
 import { punch }from './punch';
+import { rasteira } from './rasteira';
 import { sh } from './sh';
 import { social } from './social';
 import { song } from './song';
@@ -33,6 +34,7 @@ export const commands: Command[] = [
   ping,
   pronouns,
   punch,
+  rasteira,
   sh,
   social,
   song,
