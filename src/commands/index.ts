@@ -5,6 +5,7 @@ import { evaluate } from './eval';
 import { help } from './help';
 import { hug } from './hug';
 import { kiss } from './kiss';
+import { maldicao } from './maldicao';
 import { overlay } from './overlay';
 import { ping } from './ping';
 import { pronouns } from './pronouns';
@@ -31,6 +32,7 @@ export const commands: Command[] = [
   help,
   hug,
   kiss,
+  maldicao,
   overlay,
   ping,
   pronouns,
