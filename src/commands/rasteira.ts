@@ -1,4 +1,4 @@
-import { broadcast, send } from '../utils';
+import { send } from '../utils';
 import type { Command } from '.';
 
 const praga = [

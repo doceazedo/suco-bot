@@ -15,6 +15,7 @@ import { social } from './social';
 import { song } from './song';
 import { specs } from './specs';
 import { team } from './team';
+import { tronco } from './tronco';
 import { tts } from './tts';
 import { xxx } from './xxx';
 
@@ -40,6 +41,7 @@ export const commands: Command[] = [
   song,
   specs,
   team,
+  tronco,
   tts,
   xxx
 ];
