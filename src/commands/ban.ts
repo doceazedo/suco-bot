@@ -28,7 +28,12 @@ const praga = [
   "tomar virus porque abriu o fotos_quentes_do_bbb.apk",
   "formatar o pc sem fazer backup",
   "ser programador(a) de uma única linguagem de programação",
-  "fazer framework de 20 Gb que depende da internet inteira pra implementar uma função de print"
+  "fazer framework de 20 Gb que depende da internet inteira pra implementar uma função de print",
+  "hackear o servidor du amiguinhe sem acobertar o próprio IP",
+  "proibir ssh no firewall e se trancar fora do próprio servidor",
+  "deletar a system32",
+  "usar o thanosJS de dependência do programinha da empresa",
+  "pedir por serviços clandestinos no grupinho de hackers"
 ]
 
 const get_offense = () => praga[Math.floor(Math.random()*praga.length)]
