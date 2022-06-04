@@ -15,7 +15,8 @@ const praga = [
   "nunca mais na vida usar calmantes não regulamentados pela anvisa",
   "cursar a faculdade de novo",
   "virar saco de pancada de canguru boxeador viciado em anabolizantes esteroidados",
-  "convencer a aws a cobrar menos de 10 USD / mes pra rodar as coisas delu"
+  "convencer a aws a cobrar menos de 10 USD / mes pra rodar as coisas delu",
+  "ser amaldiçoado"
 ]
 
 const get_offense = () => praga[Math.floor(Math.random()*praga.length)]
