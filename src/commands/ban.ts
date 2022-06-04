@@ -15,7 +15,14 @@ const praga = [
   "soltar pum em baixo da coberta",
   "dormir roncando no meio da reunião com o microfone aberto",
   "fumar cigarro no posto de gasolina",
-  "ter jogado 30 bitcoins no lixo em 2008"
+  "ter jogado 30 bitcoins no lixo em 2008",
+  "falar o nome da amante enquanto dorme com mozão",
+  "mostrar o txt com as senhas enquanto faz live",
+  "comitar o .env",
+  "fazer deploy na sexta a noite",
+  "acordar cedo no fim de semana para trabalhar",
+  "sugerir hora extra pro patrão",
+  "reclamar com a professora que a prova que a turma toda tirou 2 tava fácil"
 ]
 
 const get_offense = () => praga[Math.floor(Math.random()*praga.length)]
