@@ -13,7 +13,9 @@ const praga = [
   "usar a privada entupida",
   "dar skip na musica boa",
   "soltar pum em baixo da coberta",
-  "dormir roncando no meio da reunião com o microfone aberto"
+  "dormir roncando no meio da reunião com o microfone aberto",
+  "fumar cigarro no posto de gasolina",
+  "ter jogado 30 bitcoins no lixo em 2008"
 ]
 
 const get_offense = () => praga[Math.floor(Math.random()*praga.length)]
