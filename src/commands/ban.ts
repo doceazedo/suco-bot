@@ -22,7 +22,9 @@ const praga = [
   "fazer deploy na sexta a noite",
   "acordar cedo no fim de semana para trabalhar",
   "sugerir hora extra pro patrão",
-  "reclamar com a professora que a prova que a turma toda tirou 2 tava fácil"
+  "reclamar com a professora que a prova que a turma toda tirou 2 tava fácil",
+  "achar que java é orientado a objetos",
+  "dar spoiler de série do merdiflix"
 ]
 
 const get_offense = () => praga[Math.floor(Math.random()*praga.length)]
