@@ -33,7 +33,7 @@ export const tronco: Command = {
   exec: async (input, args, user) => {
     const tronco_ = get_tronco(user.userName)
     send(
-      `@${user.username} tem ${tronco_[0]} cm de tronco ${tronco_[1]}`
+      `@${user.username} tem ${size}cm de tronco ${message}`
     );
   },
 };
