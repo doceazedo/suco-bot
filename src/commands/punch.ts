@@ -17,7 +17,7 @@ export const punch: Command = {
     send(
       `@${user.username} enfia um socão na cara de ${args.join(
         ' '
-      )} que ${get_offense()} PunOko BOP`
+      )} que ${getOffense()} PunOko BOP`
     );
   },
 };
