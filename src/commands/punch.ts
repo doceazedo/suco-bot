@@ -9,7 +9,7 @@ const offenses = [
   'vai a nocaute e perde o UFC - ultimate fapping contest',
 ];
 
-const get_offense = () => mensagem[Math.floor(Math.random() * mensagem.length)];
+const getOffense = () => offenses[Math.floor(Math.random() * offenses.length)];
 
 export const punch: Command = {
   aliases: ['punch', 'soco', 'bate', 'knockout'],
