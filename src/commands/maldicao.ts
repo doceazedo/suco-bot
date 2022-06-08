@@ -25,7 +25,7 @@ export const maldicao: Command = {
   aliases: ['maldicao', 'praga', 'coisaruim', 'ritual'],
   exec: async (input, args, user) => {
     send(
-      `${args.join(" ")} foi amaldiçoadu a ${get_offense()} PunOko`
+      `${args.join(" ")} foi amaldiçoade a ${getOffense()} PunOko`
     );
   },
 };
