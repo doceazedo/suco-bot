@@ -9,7 +9,7 @@ const mensagem = [
   'cai no meu conceito',
 ];
 
-const get_offense = () => mensagem[Math.floor(Math.random() * mensagem.length)];
+const getOffense = () => offenses[Math.floor(Math.random() * offenses.length)];
 
 export const rasteira: Command = {
   aliases: [
