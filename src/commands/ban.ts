@@ -36,7 +36,7 @@ const mensagem = [
   'pedir por serviços clandestinos no grupinho de hackers',
 ];
 
-const get_offense = () => mensagem[Math.floor(Math.random() * mensagem.length)];
+const getOffense = () => offenses[Math.floor(Math.random() * offenses.length)];
 
 export const ban: Command = {
   aliases: ['ban', 'kick', 'bane', 'somedaqui'],
