@@ -10,7 +10,7 @@ import { maldicao } from './maldicao';
 import { overlay } from './overlay';
 import { ping } from './ping';
 import { pronouns } from './pronouns';
-import { punch }from './punch';
+import { punch } from './punch';
 import { rasteira } from './rasteira';
 import { sh } from './sh';
 import { social } from './social';
@@ -47,5 +47,5 @@ export const commands: Command[] = [
   team,
   tronco,
   tts,
-  xxx
+  xxx,
 ];
