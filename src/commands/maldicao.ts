@@ -19,7 +19,7 @@ const praga = [
   "ser amaldiçoado"
 ]
 
-const get_offense = () => praga[Math.floor(Math.random()*praga.length)]
+const getOffense = () => offenses[Math.floor(Math.random() * offenses.length)]
 
 export const maldicao: Command = {
   aliases: ['maldicao', 'praga', 'coisaruim', 'ritual'],
