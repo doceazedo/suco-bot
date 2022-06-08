@@ -18,7 +18,7 @@ const makeTronco = () => {
     return [size, 'parabéns... você passou da minha regua... ta feliz? eu não to não... some daqui, vai']
 }
 
-const get_tronco = (userName: PropertyKey) => {
+const getTronco = (userName: PropertyKey) => {
     if (!!troncos[userName]) return troncos[userName];
     troncos[userName] = makeTronco();
     return troncos[userName];
