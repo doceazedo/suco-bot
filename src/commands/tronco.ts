@@ -31,7 +31,7 @@ const get_tronco = (userName: PropertyKey) => {
 export const tronco: Command = {
   aliases: ['tronco', 'geba', 'giromba', 'jamanta', 'pika', 'bengaladokid', 'britadeira', 'trozoba', 'pipico', 'anaconda', 'trambolha', 'baqueta'],
   exec: async (input, args, user) => {
-    const tronco_ = get_tronco(user.userName)
+    const [size, message] = getTronco(user.userName)
     send(
       `@${user.username} tem ${size}cm de tronco ${message}`
     );
