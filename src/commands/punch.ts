@@ -1,7 +1,7 @@
 import { send } from '../utils';
 import type { Command } from '.';
 
-const mensagem = [
+const offenses = [
   'vai a nocaute beijando o chão com muito amor',
   'sai voando, entra em orbita, bate com a cara na estação espacial e abre um buraco novo na lua',
   'voa de cara na menina feia e psicopata, da um beijo nela e é forçado a se casar com ela e viver sofrendo para sempre',
