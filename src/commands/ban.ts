@@ -1,7 +1,7 @@
 import { send } from '../utils';
 import type { Command } from '.';
 
-const mensagem = [
+const offenses = [
   'achar que react é mais legal que svelte',
   'que eu quis',
   'ser trouxa',
