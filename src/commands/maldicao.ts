@@ -1,7 +1,7 @@
 import { send } from '../utils';
 import type { Command } from '.';
 
-const praga = [
+const offenses = [
   "ser afogade num tanque cheio de tubarões por um psicopata gostoso yandere que canta bem que não aceita o fim da relação",
   "virar um proletariade que trabalha numa mina de amianto pra ganhar um pacote de doritos por dia pra alimentar a esposa e 300 filhos enquanto nada numa represa de lama tóxica da mineradora over rica que não liga pra elu.",
   "tomar um rojão nuclear no meio do C# e sair voando até a orbita de netuno batendo em cada lixo espacial que a humanidade fidida tacou no ceu pra atropelar os pombos",
