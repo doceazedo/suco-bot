@@ -19,13 +19,9 @@ const makeTronco = () => {
 }
 
 const get_tronco = (userName: PropertyKey) => {
-    if (troncos.hasOwnProperty(userName)) {
-        return troncos[userName]
-    }
-
-    troncos[userName] = make_tronco()
-
-    return troncos[userName]
+    if (!!troncos[userName]) return troncos[userName];
+    troncos[userName] = makeTronco();
+    return troncos[userName];
 }
 
 export const tronco: Command = {
