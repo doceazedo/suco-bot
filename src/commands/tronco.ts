@@ -5,7 +5,7 @@ let troncos = {} as any
 
 const randomNumber = () => Math.floor(Math.random() * (30 - 1) + 1)
 
-const make_tronco = () => {
+const makeTronco = () => {
     const size = randomNumber()
 
     if (size < 5) {
