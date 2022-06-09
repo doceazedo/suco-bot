@@ -5,7 +5,9 @@ export const xxx: Command = {
   aliases: ['xxx'],
   exec: async (input, args, user) => {
     send(
-      `@${user.username} ama ${args.join(" ")}... excessivamente... aqui não @${user.username}... tem crianças aqui.`
+      `@${user.username} ama ${args.join(' ')}... excessivamente... aqui não @${
+        user.username
+      }... tem crianças aqui.`
     );
   },
 };
