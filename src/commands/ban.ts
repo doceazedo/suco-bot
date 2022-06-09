@@ -41,6 +41,6 @@ const getOffense = () => offenses[Math.floor(Math.random() * offenses.length)];
 export const ban: Command = {
   aliases: ['ban', 'kick', 'bane', 'somedaqui'],
   exec: async (input, args, user) => {
-    send(`${args.join(' ')} levou ban por ${get_offense()} PunOko`);
+    send(`${args.join(' ')} levou ban por ${getOffense()} PunOko`);
   },
 };

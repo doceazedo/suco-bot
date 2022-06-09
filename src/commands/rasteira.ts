@@ -23,7 +23,7 @@ export const rasteira: Command = {
     send(
       `@${user.username} enfia uma rasteira na cara du ${args.join(
         ' '
-      )} que ${get_offense()} PunOko`
+      )} que ${getOffense()} PunOko`
     );
   },
 };
