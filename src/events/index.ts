@@ -1,12 +1,13 @@
-import { bits } from './bits';
-import { donation } from './donation';
-import { follow } from './follow';
-import { raid } from './raid';
-import { subscription } from './subscription';
+import { bitsEvent } from './bits';
+import { followEvent } from './follow';
+import { raidEvent } from './raid';
+import { subscriptionEvent } from './subscription';
+import { subscriptionMessageEvent } from './subscription-message';
 
-export type Event = {
-  type: string;
-  exec: (message: any) => void;
-};
-
-export const events: Event[] = [bits, donation, follow, raid, subscription];
+export const twitchEvents = [
+  bitsEvent,
+  followEvent,
+  raidEvent,
+  subscriptionEvent,
+  subscriptionMessageEvent,
+];

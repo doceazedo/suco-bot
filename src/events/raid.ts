@@ -1,35 +1,20 @@
-import { notify, send } from '../utils';
+import type { EventSubListener } from '@twurple/eventsub';
+import { getUser } from '../clients';
+import { broadcast, notify, send } from '../utils';
 
-type EventMessageRaid = {
-  priority: number;
-  _id: string;
-  from: string;
-  raiders: number;
-  payload?: any[];
-  name: string;
-  repeat: boolean;
-  isTest: boolean;
-  createdAt: string;
-  platform: string;
-  type: string;
-  hash: string;
-  read: boolean;
-  historical: boolean;
-  forceShow: boolean;
-  success: boolean;
-  forceRepeat: boolean;
-};
-
-export const raid = {
-  type: 'raid',
-  exec: (message: EventMessageRaid) => {
+export const raidEvent = (eventSubClient: EventSubListener, userId: string) =>
+  eventSubClient.subscribeToChannelRaidEventsTo(userId, (e) => {
     notify(
-      `${message.name} está fazendo uma raid! 🎊`,
-      `${message.raiders} pessoas vieram no grupo!`,
-      message.name
+      `${e.raidingBroadcasterDisplayName} está fazendo uma raid! 🎊`,
+      `${e.viewers} pessoas vieram no grupo!`,
+      e.raidingBroadcasterDisplayName
     );
     send(
-      `${message.name} está fazendo uma raid com ${message.raiders} pessoas! 🎊`
+      `${e.raidingBroadcasterDisplayName} está fazendo uma raid com ${e.viewers} pessoas! 🎊`
     );
-  },
-};
+    setTimeout(async () => {
+      const data = await getUser(e.raidingBroadcasterDisplayName);
+      broadcast('cmd:sh', data);
+    }, 5000);
+    broadcast('event:raid');
+  });

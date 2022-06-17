@@ -15,9 +15,13 @@ export const getCurrentlyPlayingDetails = async () => {
 };
 
 export const getUser = async (id: string) => {
-  const resp = await fetch(`${baseUrl}/users/${id}`);
-  const data: UserResponse = await resp.json();
-  return data;
+  try {
+    const resp = await fetch(`${baseUrl}/users/${id}`);
+    const data: UserResponse = await resp.json();
+    return data;
+  } catch (error) {
+    return null;
+  }
 };
 
 export const updateUser = async (id: string, body: UserRequest) => {
@@ -35,7 +39,7 @@ export const updateUser = async (id: string, body: UserRequest) => {
 export const incrementUserMessages = async (id: string) => {
   const user = await getUser(id);
   const updatedUser = await updateUser(id, {
-    messages: user.messages + 1,
+    messages: (user?.messages || 0) + 1,
   });
   return updatedUser;
 };

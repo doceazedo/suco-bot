@@ -1,4 +1,4 @@
-import { streamlabsClient, tmiClient } from './clients';
+import { tmiClient } from './clients';
 import io from './websockets';
 import commandHandler from './command-handler';
 import eventHandler from './event-handler';
@@ -15,11 +15,8 @@ tmiClient.on('message', (channel, tags, message, self) => {
   commandHandler(channel, tags, message);
 });
 
-loggr.init(`Connecting to Streamlabs...`);
-streamlabsClient.on('event', async (event: any) => {
-  if (!event?.message?.length) return;
-  eventHandler(event);
-});
+loggr.init(`Listening to Twitch EventSub...`);
+eventHandler();
 
 const wsPort = parseInt(PORT || '80');
 loggr.init(`Websocket server listening to port ${wsPort}...`);
