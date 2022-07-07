@@ -2,6 +2,7 @@ import type { ChatUserstate } from 'tmi.js';
 import { alan } from './alan';
 import { ban } from './ban';
 import { discord } from './discord';
+import { dog } from './dog';
 import { evaluate } from './eval';
 import { help } from './help';
 import { hug } from './hug';
@@ -31,6 +32,7 @@ export const commands: Command[] = [
   alan,
   ban,
   discord,
+  dog,
   evaluate,
   help,
   hug,
