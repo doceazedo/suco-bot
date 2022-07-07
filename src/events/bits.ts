@@ -1,5 +1,5 @@
 import type { EventSubListener } from '@twurple/eventsub';
-import { notify, send } from '../utils';
+import { broadcast, notify, send } from '../utils';
 
 export const bitsEvent = (eventSubClient: EventSubListener, userId: string) =>
   eventSubClient.subscribeToChannelCheerEvents(userId, (e) => {
@@ -7,4 +7,5 @@ export const bitsEvent = (eventSubClient: EventSubListener, userId: string) =>
     const title = `${displayName} mandou ${e.bits} bits! 💎`;
     notify(title, e.message, displayName);
     send(`@${title}`);
+    broadcast('event:bits');
   });

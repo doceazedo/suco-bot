@@ -1,5 +1,5 @@
 import type { EventSubListener } from '@twurple/eventsub';
-import { notify, send } from '../utils';
+import { broadcast, notify, send } from '../utils';
 
 export const followEvent = (eventSubClient: EventSubListener, userId: string) =>
   eventSubClient.subscribeToChannelFollowEvents(userId, (e) => {
@@ -9,4 +9,5 @@ export const followEvent = (eventSubClient: EventSubListener, userId: string) =>
       e.userDisplayName
     );
     send(`@${e.userDisplayName} acabou de seguir! 💜`);
+    broadcast('event:follow');
   });

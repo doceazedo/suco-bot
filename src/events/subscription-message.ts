@@ -1,5 +1,5 @@
 import type { EventSubListener } from '@twurple/eventsub';
-import { notify, send } from '../utils';
+import { broadcast, notify, send } from '../utils';
 
 export const subscriptionMessageEvent = (
   eventSubClient: EventSubListener,
@@ -28,5 +28,6 @@ export const subscriptionMessageEvent = (
 
       notify(title, body, e.userDisplayName);
       send(`@${body} 🌟`);
+      broadcast('event:subscription-message');
     }
   );
