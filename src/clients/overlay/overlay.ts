@@ -2,6 +2,7 @@ import fetch from 'cross-fetch';
 import 'dotenv/config';
 import type {
   CurrentlyPlayingDetailsResponse,
+  FollowsResponse,
   UserRequest,
   UserResponse,
 } from './overlay.types';
@@ -42,4 +43,14 @@ export const incrementUserMessages = async (id: string) => {
     messages: (user?.messages || 0) + 1,
   });
   return updatedUser;
+};
+
+export const getFollows = async (id: string) => {
+  try {
+    const resp = await fetch(`${baseUrl}/users/${id}/followage`);
+    const data: FollowsResponse = await resp.json();
+    return data;
+  } catch (error) {
+    return null;
+  }
 };

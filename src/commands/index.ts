@@ -4,6 +4,7 @@ import { ban } from './ban';
 import { discord } from './discord';
 import { dog } from './dog';
 import { evaluate } from './eval';
+import { followage } from './followage';
 import { help } from './help';
 import { hug } from './hug';
 import { kiss } from './kiss';
@@ -35,6 +36,7 @@ export const commands: Command[] = [
   discord,
   dog,
   evaluate,
+  followage,
   help,
   hug,
   kiss,
