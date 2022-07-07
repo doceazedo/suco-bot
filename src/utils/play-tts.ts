@@ -1,7 +1,9 @@
 import textToSpeech from '@google-cloud/text-to-speech';
 import AWS from 'aws-sdk';
-import { playAudio } from '.';
+import { broadcast } from '.';
 import 'dotenv/config';
+
+const playAudio = (buffer: any) => broadcast('playaudio', buffer);
 
 export const playGoogleTTS = async (text: string, languageCode: string) => {
   const client = new textToSpeech.TextToSpeechClient();
