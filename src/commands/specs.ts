@@ -9,7 +9,7 @@ const specsArr = [
   'Mobo: Gigabyte B450M DS3H',
   'Case: Corsair Carbide Series SPEC-DELTA RGB',
   'Displays: Samsung 24" 75hz 1ms + LG Flatron 17"',
-  'Teclado: Redragon Kumara',
+  'Teclado: Logitech G512',
   'Mouse: Redragon Cobra',
   'Mesa digitalizadora: Wacom CTL472',
   'Headset: Logitech Prodigy G733',
