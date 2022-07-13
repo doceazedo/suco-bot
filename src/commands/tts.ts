@@ -21,7 +21,7 @@ export const tts: Command = {
     const voiceId =
       args[0].charAt(0).toUpperCase() + args[0].slice(1).toLowerCase();
 
-    const isSSML = args[1] == 'ssml';
+    const isSSML = args[1].toLowerCase() == 'ssml';
 
     if (pollyVoices.includes(voiceId)) {
       args.shift();
