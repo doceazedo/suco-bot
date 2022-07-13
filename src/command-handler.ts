@@ -17,8 +17,15 @@ const commandHandler = (
     return;
   }
 
-  loggr.info(`${user.username} issued command "${input}"`);
-  command.exec(input, args, user);
+  try {
+    command.exec(input, args, user);
+    loggr.info(`${user.username} issued command "${input}"`);
+  } catch (error) {
+    loggr.error(
+      `An error occurred when ${user.username} tried to issue command "${input}"`
+    );
+    console.log(error);
+  }
 };
 
 export default commandHandler;
