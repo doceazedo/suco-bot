@@ -16,9 +16,10 @@ export const playGoogleTTS = async (text: string, languageCode: string) => {
   playAudio(response.audioContent);
 };
 
-export const playPollyTTS = async (text: string, voiceId: string) => {
+export const playPollyTTS = async (text: string, voiceId: string, ssml: boolean) => {
   const params = {
     Text: text,
+    TextType: ssml ? 'ssml' : 'text',
     OutputFormat: 'mp3',
     VoiceId: voiceId,
   };
