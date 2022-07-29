@@ -19,6 +19,8 @@ export const bellebelinha: Command = {
     'cadeobanheiro',
     'belle',
     'belinha',
+    'neusa',
+    'neusaneusinha'
   ],
   exec: async () =>
     broadcast(
