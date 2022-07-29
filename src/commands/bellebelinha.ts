@@ -11,6 +11,8 @@ const videoUrl = [
 
 export const bellebelinha: Command = {
   aliases: [
+    'neusa',
+    'neusaneusinha',
     'bellebelinha',
     'hablo',
     'hablomesmo',
