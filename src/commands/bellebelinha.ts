@@ -11,8 +11,6 @@ const videoUrl = [
 
 export const bellebelinha: Command = {
   aliases: [
-    'neusa',
-    'neusaneusinha',
     'bellebelinha',
     'hablo',
     'hablomesmo',
@@ -21,6 +19,8 @@ export const bellebelinha: Command = {
     'cadeobanheiro',
     'belle',
     'belinha',
+    'neusa',
+    'neusaneusinha'
   ],
   exec: async () =>
     broadcast(
