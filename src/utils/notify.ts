@@ -15,6 +15,7 @@ export const notify = async (
     // TODO: remove this
     userId.startsWith('test') ? 'doceazedo911' : userId
   );
+  return; // TODO: remove this
   const icon = path.join(os.tmpdir(), `${user?.id}.jpg`);
   await downloadImage(user?.avatar || '', icon);
 
