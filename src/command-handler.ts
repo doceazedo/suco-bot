@@ -13,7 +13,7 @@ const commandHandler = (
 
   if (user['user-id'] && blocklist.includes(user['user-id'])) {
     loggr.warn(
-      `${user.username} tried to run unknown command "${input}" but they're blocked`
+      `${user.username} tried to run command "${input}" but they're blocked`
     );
     return;
   }
