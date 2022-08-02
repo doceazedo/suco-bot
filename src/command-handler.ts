@@ -1,6 +1,7 @@
 import { commands } from './commands';
 import { replyError, loggr } from './utils';
 import type { ChatUserstate } from 'tmi.js';
+import { blocklist } from './helpers';
 
 const commandHandler = (
   channel: string,
@@ -9,6 +10,13 @@ const commandHandler = (
 ) => {
   const args = message.split(' ');
   const input = args.shift()?.substring(1).toLowerCase() || '';
+
+  if (user['user-id'] && blocklist.includes(user['user-id'])) {
+    loggr.warn(
+      `${user.username} tried to run unknown command "${input}" but they're blocked`
+    );
+    return;
+  }
 
   const command = commands.find((cmd) => cmd.aliases?.includes(input));
   if (!command) {
