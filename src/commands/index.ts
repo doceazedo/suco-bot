@@ -24,6 +24,7 @@ import { team } from './team';
 import { tronco } from './tronco';
 import { tts } from './tts';
 import { whois } from './whois';
+import { xixi } from './xixi';
 import { xxx } from './xxx';
 
 export type Command = {
@@ -57,5 +58,6 @@ export const commands: Command[] = [
   tronco,
   tts,
   whois,
+  xixi,
   xxx,
 ];
