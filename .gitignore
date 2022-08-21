@@ -11,6 +11,7 @@ logs
 yarn-debug.log*
 yarn-error.log*
 npm-debug.log*
+.yarn
 
 # environment variables
 .env
@@ -19,3 +20,4 @@ npm-debug.log*
 build/
 
 google-application-credentials.json
+.idea
