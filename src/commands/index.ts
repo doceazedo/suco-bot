@@ -13,6 +13,7 @@ import { maldicao } from './maldicao';
 import { odeiopc } from './odeiopc';
 import { overlay } from './overlay';
 import { ping } from './ping';
+import { pix } from './pix';
 import { pronouns } from './pronouns';
 import { punch } from './punch';
 import { rasteira } from './rasteira';
@@ -47,6 +48,7 @@ export const commands: Command[] = [
   odeiopc,
   overlay,
   ping,
+  pix,
   pronouns,
   punch,
   rasteira,
