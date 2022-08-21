@@ -1,4 +1,4 @@
-import { broadcast } from '../utils';
+import { playAudioFromFile } from '../utils';
 import type {
   EventSubChannelRedemptionAddEvent,
   EventSubListener,
@@ -13,7 +13,7 @@ const rewards: Reward[] = [
   {
     // 🐴 Cavalo
     id: 'e2985ae2-aa0b-40e4-a80d-64bcaa1fe07f',
-    handler: () => broadcast('play:audio', 'cavalo'),
+    handler: () => playAudioFromFile('cavalo.mp3'),
   },
 ];
 

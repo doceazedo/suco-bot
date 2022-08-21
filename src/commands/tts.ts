@@ -1,7 +1,12 @@
-import { broadcast, isModerator, replyError } from '../utils';
+import {
+  broadcast,
+  isModerator,
+  playGoogleTTS,
+  playPollyTTS,
+  replyError,
+} from '../utils';
 import { pollyVoices } from '../helpers';
 import type { Command } from '.';
-import { playGoogleTTS, playPollyTTS } from '../utils/play-tts';
 
 export const tts: Command = {
   aliases: ['tts'],
