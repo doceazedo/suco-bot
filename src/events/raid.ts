@@ -1,6 +1,7 @@
 import type { EventSubListener } from '@twurple/eventsub';
 import { getUser } from '../clients';
 import { broadcast, notify, send } from '../utils';
+import type { AlertEventData } from './events.types';
 
 export const raidEvent = (eventSubClient: EventSubListener, userId: string) =>
   eventSubClient.subscribeToChannelRaidEventsTo(userId, (e) => {
@@ -17,4 +18,9 @@ export const raidEvent = (eventSubClient: EventSubListener, userId: string) =>
       broadcast('cmd:sh', data);
     }, 5000);
     broadcast('event:raid');
+    broadcast<AlertEventData>('event:alert', {
+      title: `Raid de ${e.raidingBroadcasterDisplayName}!`,
+      message: `${e.viewers} pessoa vieram junto`,
+      image: 'assets/img/cat-dancing.gif',
+    });
   });

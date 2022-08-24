@@ -1,5 +1,6 @@
 import type { EventSubListener } from '@twurple/eventsub';
 import { broadcast, notify, send } from '../utils';
+import type { AlertEventData } from './events.types';
 
 export const subscriptionMessageEvent = (
   eventSubClient: EventSubListener,
@@ -28,6 +29,10 @@ export const subscriptionMessageEvent = (
 
       notify(title, body, e.userDisplayName);
       send(`@${body} 🌟`);
-      broadcast('event:subscription-message');
+      broadcast<AlertEventData>('event:alert', {
+        title: `${e.userDisplayName} se inscreveu!`,
+        message: e.messageText,
+        image: 'assets/img/sailor-moon-hug.gif',
+      });
     }
   );
