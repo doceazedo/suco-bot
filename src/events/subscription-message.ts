@@ -1,5 +1,5 @@
 import type { EventSubListener } from '@twurple/eventsub';
-import { broadcast, notify, send } from '../utils';
+import { broadcast, send } from '../utils';
 import type { AlertEventData } from './events.types';
 
 export const subscriptionMessageEvent = (
@@ -27,7 +27,6 @@ export const subscriptionMessageEvent = (
       const title = isResub ? resubTitle : subTitle;
       const body = isResub ? resubMessage : subMessage;
 
-      notify(title, body, e.userDisplayName);
       send(`@${body} 🌟`);
       broadcast<AlertEventData>('event:alert', {
         title: `${e.userDisplayName} se inscreveu!`,
