@@ -12,8 +12,8 @@ export const raidEvent = (eventSubClient: EventSubListener, userId: string) =>
       const data = await getUser(e.raidingBroadcasterDisplayName);
       broadcast('cmd:sh', data);
     }, 5000);
-    broadcast('event:raid');
     broadcast<AlertEventData>('event:alert', {
+      type: 'raid',
       title: `Raid de ${e.raidingBroadcasterDisplayName}!`,
       message: `${e.viewers} pessoa vieram junto`,
       image: '/assets/img/cat-dancing.gif',

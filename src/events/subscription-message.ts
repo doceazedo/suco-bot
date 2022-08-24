@@ -29,6 +29,7 @@ export const subscriptionMessageEvent = (
 
       send(`@${body} 🌟`);
       broadcast<AlertEventData>('event:alert', {
+        type: 'subscription',
         title: `${e.userDisplayName} se inscreveu!`,
         message: e.messageText,
         image: '/assets/img/sailor-moon-hug.gif',

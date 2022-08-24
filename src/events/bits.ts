@@ -8,6 +8,7 @@ export const bitsEvent = (eventSubClient: EventSubListener, userId: string) =>
     const title = `${displayName} mandou ${e.bits} bits! 💎`;
     send(`@${title}`);
     broadcast<AlertEventData>('event:alert', {
+      type: 'bits',
       title: `${e.userDisplayName} mandou ${e.bits}!`,
       message: e.message,
       image: '/assets/img/rei-chair.gif',
