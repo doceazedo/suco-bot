@@ -3,4 +3,5 @@ export type AlertEventData = {
   message?: string;
   image?: string;
   duration?: number;
+  audio?: string;
 };

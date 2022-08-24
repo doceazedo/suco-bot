@@ -10,6 +10,7 @@ export const bitsEvent = (eventSubClient: EventSubListener, userId: string) =>
     broadcast<AlertEventData>('event:alert', {
       title: `${e.userDisplayName} mandou ${e.bits}!`,
       message: e.message,
-      image: 'assets/img/rei-chair.gif',
+      image: '/assets/img/rei-chair.gif',
+      audio: '/assets/audio/alert-bits.mp3',
     });
   });

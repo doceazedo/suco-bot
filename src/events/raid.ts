@@ -16,6 +16,7 @@ export const raidEvent = (eventSubClient: EventSubListener, userId: string) =>
     broadcast<AlertEventData>('event:alert', {
       title: `Raid de ${e.raidingBroadcasterDisplayName}!`,
       message: `${e.viewers} pessoa vieram junto`,
-      image: 'assets/img/cat-dancing.gif',
+      image: '/assets/img/cat-dancing.gif',
+      audio: '/assets/audio/alert-raid.mp3',
     });
   });

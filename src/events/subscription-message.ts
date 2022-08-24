@@ -31,7 +31,8 @@ export const subscriptionMessageEvent = (
       broadcast<AlertEventData>('event:alert', {
         title: `${e.userDisplayName} se inscreveu!`,
         message: e.messageText,
-        image: 'assets/img/sailor-moon-hug.gif',
+        image: '/assets/img/sailor-moon-hug.gif',
+        audio: '/assets/audio/alert-subscription.mp3',
       });
     }
   );
