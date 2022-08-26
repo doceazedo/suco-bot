@@ -20,10 +20,15 @@ type Color =
   | 'Firebrick';
 
 const channel = process.env.TWITCH_CHANNEL || '';
+const maxLength = 440;
+
+const trim = (str: string, length = maxLength) =>
+  str.length > length ? str.substring(0, length - 3) + '...' : str;
 
 export const send = (str: string, color: Color = 'SpringGreen') => {
+  const trimmedMessage = trim(str);
   tmiClient.say(channel, `/color ${color}`);
-  tmiClient.say(channel, str);
+  tmiClient.say(channel, trimmedMessage);
 };
 
 export const reply = (
