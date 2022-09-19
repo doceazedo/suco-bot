@@ -10,27 +10,22 @@
 ## 🧰 Installation
 
 1. Git clone both this and the [overlay](https://github.com/doceazedo/overlay) repositories. For help on setting up the overlay, refer to it's [README](https://github.com/doceazedo/overlay#readme).
-2. Grab your Streamlabs socket API token at the **[API Settings](https://streamlabs.com/dashboard#/settings/api-settings) > API Tokens** page on your dashboard.
+2. Run `npm install` to install the dependencies.
 3. Create a [Twitch app](https://dev.twitch.tv/docs/authentication/register-app) and grab an [OAuth token](https://twitchapps.com/tokengen) - this can be from your personal account or any other, as no messages will be sent from it - with the following scopes: `chat:read chat:edit channel:moderate whispers:read whispers:edit channel_editor channel:read:subscriptions`.
 4. For Google TTS to work, grab your GCP application credentials by following [these steps](https://www.npmjs.com/package/@google-cloud/text-to-speech#before-you-begin).
 5. For Amazon Polly TTS to work, grab your AWS keys by following [these steps](https://docs.aws.amazon.com/polly/latest/dg/setting-up.html).
 
 ## 🤹‍♂️ Usage
 
-Before starting the bot, **it requires the overlay to be running**. Remember to start it on the port you setup on your ".env" file, like:
+Before starting the bot, make sure the overlay is already running, then run:
 
 ```bash
-yarn start --port 2424
-```
-
-Next, on the suco-bot folder, run:
-
-```bash
-yarn start
+npm run build
+npm run start
 ```
 
 If you want to contribute or develop custom features, you can start the development server with:
 
 ```bash
-yarn dev
+npm run dev
 ```
