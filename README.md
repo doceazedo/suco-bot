@@ -1,5 +1,7 @@
 ![SucoBOT banner](assets/img/banner.png)
 
+> **Warning**: this repository is now archived in favor of the [overlay monorepo](https://github.com/doceazedo/overlay).
+
 **SucoBOT** 🧃🤖 (formerly SucoDeSvelte) is the Twitch bot companion for the [DoceAzedo's Overlay](https://github.com/doceazedo/overlay), featured with alert notifications, interactive commands such as `!tts`, `!eval`, `!icon`, `!pronouns` and more cool stuff to come!
 
 ## 📝 Notes
